@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailActivity"
+    android:background="@color/back"
+    android:layout_gravity="center"
+    >
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_margin="50dp"
+        android:layout_gravity="center"
+        android:layout_marginRight="100dp"
+        android:padding="20dp"
+        app:cardElevation="8dp"
+        android:id="@+id/cardview">
+
+        <ImageView
+            android:id="@+id/movie_thumbnail"
+            android:src="@drawable/placeholder"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:padding="10dp"/>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/cardview"
+        android:scrollbars="none"
+        android:layout_marginTop="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="40dp"
+                    android:padding="5dp"
+                    android:paddingLeft="10dp"
+                    android:text="Title:"
+                    android:textColor="@color/dark"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_margin="10dp"
+                    android:fontFamily="@font/brandon_grotesque_black"/>
+
+                <TextView
+                    android:id="@+id/movie_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="ABCDE Moview "
+                    android:textColor="@android:color/black"
+                    android:textSize="22sp"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="10dp"
+                    android:padding="5dp"
+                    android:layout_margin="5dp"
+                    android:fontFamily="@font/brandon_grotesque_black"/>
+
+                <TextView
+                    android:text="Rating:"
+                    android:textColor="@color/dark"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="5dp"
+                    android:layout_margin="10dp"
+                    android:padding="5dp"
+                    android:paddingLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/brandon_grotesque_black"/>
+
+                <TextView
+                    android:id="@+id/user_rating"
+                    android:text="4.5"
+                    android:textSize="22sp"
+                    android:textColor="@android:color/black"
+                    android:layout_marginTop="5dp"
+                    android:layout_margin="10dp"
+                    android:padding="5dp"
+                    android:paddingLeft="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/brandon_grotesque_black"/>
+                <TextView
+                    android:text="Release Date:"
+                    android:textColor="@color/dark"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingEnd="10dp"
+                    android:padding="5dp"
+                    android:layout_margin="10dp"
+                    android:fontFamily="@font/brandon_grotesque_black"/>
+
+                <TextView
+                    android:id="@+id/release_date"
+                    android:text="Jan 10, 2021"
+                    android:textSize="22sp"
+                    android:textColor="@android:color/black"
+                    android:layout_marginTop="5dp"
+                    android:layout_margin="10dp"
+                    android:padding="5dp"
+                    android:paddingLeft="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/brandon_grotesque_black"/>
+                <TextView
+                    android:text="Synopsis: "
+                    android:layout_marginTop="18dp"
+                    android:textColor="@color/dark"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingEnd="10dp"
+
+                    android:padding="5dp"
+                    android:layout_margin="10dp"
+                    android:fontFamily="@font/brandon_grotesque_black"/>
+
+                <TextView
+                    android:id="@+id/movie_synopsis"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="10dp"
+                    android:paddingBottom="10dp"
+                    android:padding="10dp"
+                    android:layout_margin="10dp"
+                    android:text="@string/movie_overview"
+                    android:textColor="@android:color/black"
+                    android:textSize="22sp"
+                    android:fontFamily="@font/brandon_grotesque_black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+
+            </LinearLayout>
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+
+
+    <!--<ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/cardview"
+        android:id="@+id/Scroll">
+
+        <LinearLayout
+            android:id="@+id/main"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimary"
+                android:text="Title:"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/movie_title"
+                android:textColor="@android:color/black"
+                android:layout_marginTop="5dp"
+                android:textSize="22sp"
+                android:text="ABCDE Moview "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:text="Rating:"
+                android:textColor="@color/colorPrimary"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/user_rating"
+                android:text="4.5"
+                android:textSize="22sp"
+                android:textColor="@android:color/black"
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:text="Release Date:"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/release_date"
+                android:text="Jan 10, 2021"
+                android:textSize="22sp"
+                android:textColor="@android:color/black"
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_below="@id/main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="Synopsis: "
+                android:layout_marginTop="18dp"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/movie_synopsis"
+                android:layout_marginTop="5dp"
+                android:text="@string/movie_overview"
+                android:textColor="@android:color/black"
+                android:textSize="22sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+    </ScrollView>-->
+
+</RelativeLayout>
